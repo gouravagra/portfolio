@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gourav Agrawal's portfolio showcasing AI, ML, and Backend Development projects.">
+    <meta name="author" content="Gourav Agrawal">
+    <title>Gourav Agrawal Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #100f0f;
+        }
+        .hero-section {
+            background: url('images/hero-bg.jpg') no-repeat center center/cover;
+            padding: 120px 20px;
+            color: #fff;
+            text-align: center;
+        }
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        }
+        .hero-section p {
+            font-size: 1.5rem;
+            margin: 15px 0 25px;
+        }
+        .btn-hero {
+            background-color: #0f0e0e;
+            color: rgb(249, 244, 244);
+            font-size: 1.2rem;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-transform: uppercase;
+            transition: 0.3s ease-in-out;
+        }
+        .btn-hero:hover {
+            background-color: #222;
+            transform: scale(1.05);
+        }
+
+        .about-section {
+            padding: 50px 20px;
+            background-color: #eaeaea;
+            text-align: center;
+        }
+        .about-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #fff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .about-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 960px;
+            margin: auto;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .card-body p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        .skills-card {
+            background-color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        .skills-card:hover {
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+        }
+        .skills-card img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .card-img-top {
+            border-radius: 8px;
+        }
+    
+    /* Add these styles to make the pie chart responsive */
+    .pie-chart-container {
+        max-width: 100%;
+        width: 300px;
+        height: 300px;
+        margin: 20px auto;
+    }
+
+    /* Optional: if you want it to be responsive based on the screen size */
+    .pie-chart {
+        width: 100% !important;
+        height: auto !important;
+    }
+    .social-icon img {
+    width: 40px; /* Adjust width as needed */
+    height: 40px; /* Adjust height as needed */
+    border-radius: 50%; /* Optional: Makes the icons circular */
+    margin: 5px; /* Adds some spacing between icons */
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Gourav Agrawal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <h1>Gourav Agrawal</h1>
+        <p>AI/ML Developer | Backend Specialist | Tech Enthusiast</p>
+        <a href="https://drive.google.com/file/d/1EmhK_2EZsKJhO7RGbLHYVgvjngV3yUZn/view?usp=drive_link" class="btn-hero" download>Download Resume</a>
+        <div class="pie-chart-container">
+            <h3>Eligible for this Role</h3>
+            <canvas id="skillsPieChart" width="50" height="50">Expertise in AI/ML, Data Science, and Generative AI</canvas>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <img src="DSC_0090.JPG" alt="Gourav Agrawal">
+            <h2>About Me</h2>
+            <p>
+                I'm Gourav Agrawal, a passionate technology enthusiast with expertise in AI, ML, and Backend Development. 
+                With a Master's in Computer Applications from Maulana Azad National Institute of Technology (MANIT) Bhopal 
+                and hands-on experience at Paygic GA Technology, I have worked on cutting-edge projects, including document extraction 
+                chatbots and AI FaceSwap applications. Let's collaborate and build innovative solutions together!
+            </p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5 bg-light">
+        <div class="container">
+            <h1 class="text-center mb-5">Experience</h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Experience Overview</h5>
+                            <p class="card-text">I have worked on multiple impactful projects in the field of AI, ML, and backend development. Below are two key projects I have contributed to:</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h5 class="card-title">AI-powered Document Extraction Chatbot</h5>
+                                            <p class="card-text">Developed a chatbot leveraging advanced NLP techniques for document extraction. Integrated GPT-4 and Mistral 7B models for better text understanding and response generation.</p>
+                                            <a href="experience.html" class="btn btn-primary">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h5 class="card-title">AI FaceSwap Application</h5>
+                                            <p class="card-text">Built an AI FaceSwap application, enabling users to swap faces in real-time using deep learning techniques. The project incorporated GANs and state-of-the-art facial recognition models.</p>
+                                            <a href="experience.html" class="btn btn-primary">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h1 class="text-center mb-5">Projects</h1>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="DALL·E 2024-12-21 17.17.44 - A digital illustration of an AI-powered Doctor Appointment Chatbot interface. The screen displays a friendly chatbot interacting with a user, with tex.webp" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Doctor Appointment Chatbot</h5>
+                            <p class="card-text">Developed an AI-powered Doctor Appointment Chatbot that allows users to book appointments simply by interacting with the chatbot. The system uses NLP for intelligent suggestions based on symptoms and medical concerns.</p>
+                            <a href="https://github.com/gouravagra/doctor_appointment_chatbot" class="btn btn-secondary">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="DALL·E 2024-12-21 18.10.01 - A futuristic visualization of a language translation system powered by LangChain architecture and Large Language Models (LLMs). The image showcases a .webp" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Language Transition</h5>
+                            <p class="card-text">Developed a language translation system using LangChain architecture and LLMs. The system integrates real-time translations with context-based suggestions, ensuring a smooth and accurate user experience.</p>
+                            <a href="https://github.com/gouravagra/language_translate_by_Gemma2-9b-It" class="btn btn-secondary">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h1 class="text-center mb-5">Skills</h1>
+            <!-- Bar Chart -->
+            <div class="text-center mb-4">
+                <h3>My Expertise in Various Technologies</h3>
+                <canvas id="skillsBarChart" width="400" height="200"></canvas>
+            </div>
+    
+            <div class="row g-4">
+                <!-- Python -->
+                <div class="col-md-3 col-sm-6 text-center">
+                    <div class="skills-card">
+                        <img src="python-programming-language.webp" alt="Python" class="img-fluid mb-3" style="max-height: 150px;">
+                        <h5>Python</h5>
+                        <p>Experience in developing applications using Python for AI, Machine Learning, and backend systems.</p>
+                    </div>
+                </div>
+                <!-- Machine Learning & AI -->
+                <div class="col-md-3 col-sm-6 text-center">
+                    <div class="skills-card">
+                        <img src="artificial-intelligence-circuit-line-style-260nw-2316452929.webp" alt="Machine Learning & AI" class="img-fluid mb-3" style="max-height: 150px;">
+                        <h5>Machine Learning & AI</h5>
+                        <p>Proficient in building and optimizing AI and Machine Learning models using tools like Scikit-learn, PyTorch, TensorFlow, and neural networks.</p>
+                    </div>
+                </div>
+                <!-- Natural Language Processing & Generative AI -->
+                <div class="col-md-3 col-sm-6 text-center">
+                    <div class="skills-card">
+                        <img src="6441d5f76d21e1e4dee9ffa2_Gen AI blog_Blog hero.webp" alt="Natural Language Processing & Generative AI" class="img-fluid mb-3" style="max-height: 150px;">
+                        <h5>Natural Language Processing & Generative AI</h5>
+                        <p>Skilled in NLP tasks like text preprocessing, sentiment analysis, and document extraction, working with models like OpenAI GPT, Mistral, and LLaMA.</p>
+                    </div>
+                </div>
+                <!-- AWS & Cloud Services -->
+                <div class="col-md-3 col-sm-6 text-center">
+                    <div class="skills-card">
+                        <img src="images.png" alt="AWS & Cloud Services" class="img-fluid mb-3" style="max-height: 150px;">
+                        <h5>AWS & Cloud Services</h5>
+                        <p>Experience with AWS for cloud storage (S3), scaling applications, and deploying AI models using services like EC2, Lambda, and SageMaker.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Skills Bar Chart
+        var ctx = document.getElementById('skillsBarChart').getContext('2d');
+        var skillsBarChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Python', 'Machine Learning & AI', 'NLP & Generative AI', 'AWS & Cloud Services'],
+                datasets: [{
+                    label: 'Skill Proficiency (%)',
+                    data: [90, 80, 85, 75], // You can adjust these values based on your proficiency
+                    backgroundColor: '#36A2EB',
+                    borderColor: '#1F5D8C',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 text-white" style="background-color: #333;">
+        <div class="container text-center">
+            <h1 class="mb-4">Contact Me</h1>
+            <p><i class="fa fa-envelope"></i> Email: <a href="mailto:goluagrawal1432@gmail.com">goluagrawal1432@gmail.com</a></p>
+            <p><i class="fa fa-phone"></i> Phone: +91-7049819064</p>
+            <div class="d-flex justify-content-center gap-3 mt-4">
+                <a href="https://www.linkedin.com/in/gourav-agrawal-398390221/" class="social-icon" title="LinkedIn"><img src="linkdin new1.jpeg" alt="LinkedIn"></a>
+                <a href="https://github.com/gouravagra" class="social-icon" title="GitHub"><img src="github_new.png" alt="GitHub"></a>
+                <!-- <a href="#" class="social-icon" title="Medium"><img src="icons/medium.png" alt="Medium"></a> -->
+            </div>
+        </div>
+    </section>
+  
+
+
+
+
+    <!-- Bootstrap JS and Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var ctx = document.getElementById('skillsPieChart').getContext('2d');
+        var skillsPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Data Science', 'Machine Learning', 'AI', 'Genrative ai'],
+                datasets: [{
+                  data: [1, 1, 1, 1],
+                    backgroundColor: ['#ffb5e8', '#a3c1ad', '#ff5733', '#f7f0f0'],
+                    borderColor: ['#fff', '#fff', '#fff', '#fff'],
+                    borderWidth: 2
+                }]
+            }
+        });
+    </script>
+
+</body>
+</html>

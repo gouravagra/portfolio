@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Usage in AI & ML Developer and AI FaceSwap Roles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9fafc;
+        }
+        h1, h3 {
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .mb-4 {
+            margin-bottom: 1.5rem;
+        }
+        .description {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        canvas {
+            max-width: 100%;
+            height: 300px;
+            width: 600px;
+            margin: auto;
+        }
+        /* Navigation Bar */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+        .navbar a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+    </div>
+    
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h1 class="text-center mb-5">Experience</h1>
+            
+            <!-- Description for AI & ML Developer Role -->
+            <div class="description">
+                <h3>Documents Extraction Chatbot for Medical Domain</h3>
+                <p><strong>Responsibilities:</strong></p>
+                <ul>
+                    <li>Developed AI-powered document extraction chatbots using GPT-4 and Mistral 7B models.</li>
+                    <li>Extracted raw text from documents, converted it into JSON format for key data extraction, and stored structured data in SQL databases while indexing raw text in Milvus for non-SQL queries.</li>
+                    <li>Designed a query classification system that distinguished SQL and non-SQL queries, using OpenAI's text-to-SQL model for SQL execution and Milvus for non-SQL responses.</li>
+                    <li>Built APIs for document summarization, providing concise and relevant overviews.</li>
+                    <li>Developed APIs for deblurring and denoising documents, ensuring high-quality data extraction.</li>
+                    <li>Conducted POC experiments with OpenAI models and transitioned to MVP development using Mistral 7B and Phi 3.5, optimizing performance to meet client needs, with Mistral 7B delivering 1.5x better results than Phi 3.5.</li>
+                </ul>
+            </div>
+
+            <!-- Bar Chart for AI & ML Developer Role -->
+            <div class="text-center mb-4">
+                <h3>Technology Usage in AI & ML Developer Role</h3>
+                <canvas id="techBarChart"></canvas>
+            </div>
+
+            <!-- Description for AI FaceSwap Role -->
+            <div class="description">
+                <h3>AI FaceSwap for Entertainment Domain</h3>
+                <p><strong>Responsibilities:</strong></p>
+                <ul>
+                    <li>Built an AI FaceSwap application, enabling users to swap faces in real-time using deep learning techniques.</li>
+                    <li>Processed a source video and a reference image, performing face swapping in the video based on the reference image using GANs and state-of-the-art facial recognition models.</li>
+                    <li>Applied deblurring and denoising techniques to enhance the video quality, ensuring clearer visuals.</li>
+                    <li>Integrated super-resolution techniques to upscale the video’s resolution for better output quality.</li>
+                    <li>Used the Whisper model to transcribe audio from the video, converting speech to text accurately.</li>
+                    <li>Added a trimming option to allow users to cut or shorten the video as needed.</li>
+                    <li>Included a watermark feature to add branding or copyright information to the video.</li>
+                    <li>Implemented a ratio conversion feature, allowing users to adjust the aspect ratio of the video for different output formats.</li>
+                </ul>
+            </div>
+
+            <!-- Bar Chart for AI FaceSwap Role -->
+            <div class="text-center mb-4">
+                <h3>Technology Usage in AI FaceSwap Role</h3>
+                <canvas id="techBarChart2"></canvas>
+            </div>
+
+            <!-- Pie Chart for Overall Technologies Used -->
+            <div class="text-center mb-4">
+                <h3>Overall Technology Usage</h3>
+                <canvas id="techPieChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctx = document.getElementById('techBarChart').getContext('2d');
+        new Chart(ctx, { type: 'bar', data: { labels: ['Python', 'GPT-4', 'Mistral 7B', 'FastAPI', 'SQL', 'Milvus'], datasets: [{ label: 'AI & ML Developer Role', data: [1, 1, 1, 1, 1, 1], backgroundColor: '#36A2EB' }] }, options: { responsive: true }});
+        var ctx2 = document.getElementById('techBarChart2').getContext('2d');
+        new Chart(ctx2, { type: 'bar', data: { labels: ['Python', 'PyTorch', 'GANs', 'Whisper', 'OpenCV', 'Celery'], datasets: [{ label: 'AI FaceSwap Role', data: [1, 1, 1, 1, 1, 1], backgroundColor: '#FF6384' }] }, options: { responsive: true }});
+        var ctx3 = document.getElementById('techPieChart').getContext('2d');
+        new Chart(ctx3, { type: 'pie', data: { labels: ['Python', 'GPT-4', 'Mistral 7B', 'FastAPI', 'SQL', 'Milvus', 'PyTorch', 'GANs', 'Whisper', 'OpenCV', 'Celery'], datasets: [{ data: [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], backgroundColor: ['#36A2EB', '#FF6384', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40'] }] } });
+    </script>
+</body>
+</html>
